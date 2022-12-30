@@ -8,7 +8,7 @@ import {
   Label,
 } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import { validateCommentForm } from '../../utils/validateCommentForm';
+import { validateCommentForm } from '../utils/validateCommentForm';
 
 const CommentForm = ({ campsiteId }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -35,7 +35,7 @@ const CommentForm = ({ campsiteId }) => {
         <ModalBody>
           <Formik
             initialValues={{ rating: undefined, author: '', commentText: '' }}
-            onSubmit={handleSubmit}
+            onSubmit={{handleSubmit}}
             validate={validateCommentForm}>
             <Form>
               <FormGroup>
