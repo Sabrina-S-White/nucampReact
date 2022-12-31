@@ -13,7 +13,7 @@ export const fetchCampsites = createAsyncThunk(
     return data
   }
 )
-
+  
 const initialState = {
   campsitesArray: [],
   isLoading: true,
